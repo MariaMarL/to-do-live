@@ -1,8 +1,9 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useRef} from 'react'
 import { Store } from './StoreProvider';
 
 const Form = () => {
-  
+    
+    const formRef = useRef(null)
     const onAdd = (event)=>{
         event.preventDefault();
         if(title && message){
@@ -13,6 +14,8 @@ const Form = () => {
                     message
                 }
             })
+
+            formRef.current.reset();
         }
     }
 
@@ -30,7 +33,7 @@ const Form = () => {
         setMessage(e.target.value)
     }
     return (
-    <form>
+    <form ref ={formRef}>
         <label>Title:</label>
         <input onChange={addingTitle} type="text" name="title" />
         <label>Message</label>
