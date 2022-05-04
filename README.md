@@ -1,3 +1,3 @@
 # to-do-live
 
-This is a to do app project, divided in two parts, backend and fronted, in to-do-live, this repository the back side was created.  
+This is a to do app project, divided in two parts, backend and fronted, that are divided in two repositories, To-do-app_React-SpringBoot-MySQL and this, to-do-live.
